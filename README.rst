@@ -2,6 +2,7 @@
 Langevin_dynamics
 ===============================
 
+The first project of CHE477 2016:  Langevin project
 
 .. image:: https://img.shields.io/pypi/v/Langevin_dynamics.svg
         :target: https://pypi.python.org/pypi/Langevin_dynamics
