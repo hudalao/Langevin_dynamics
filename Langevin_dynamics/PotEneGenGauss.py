@@ -5,7 +5,6 @@
 #std: the standard variance of the gaussian function
 
 from scipy import signal
-from sys import stdout
 import numpy as np
 
 class Potential_Energy_Generetor(N, L, U_peak, std):
