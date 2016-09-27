@@ -26,7 +26,7 @@ import  PotEneGenSqu
 intxt =  open('input.txt', 'r')
 for line in intxt: 
     input_stri = line.split()
-
+intxt.close()
 input_int = map(float, input_stri)
 
 X0 = input_int[0]

@@ -7,7 +7,7 @@
 import numpy as np
 
 
-class Pot_Energy_Gen:
+class Pot_Energy_Gen(object):
      
     def __init__(self, delta_x, L, a, b):
         self.delta_x = delta_x
