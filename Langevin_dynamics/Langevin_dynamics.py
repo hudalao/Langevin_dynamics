@@ -27,7 +27,8 @@ intxt =  open('input1.txt', 'r')
 for line in intxt: 
     input_stri = line.split()
 intxt.close()
-input_int = map(float, input_stri)
+input_int = list(map(float, input_stri))
+
 
 X0 = input_int[0]
 V0 = input_int[1]
