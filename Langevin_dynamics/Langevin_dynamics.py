@@ -80,7 +80,7 @@ t_arr = np.linspace(0, Time, Tg)
 for t in range(Tg):
  
     Fs = rd.gauss(mean, std)
-    a = ( -damp * x  + Fs - fp ) / m
+    a = ( -damp * v  + Fs - fp ) / m
     V[t] = v + delta_t * a   
     X[t] = x + delta_t * V[t]
 #the precition is the first three digits after the decimal to pick the corresponding potential force   
