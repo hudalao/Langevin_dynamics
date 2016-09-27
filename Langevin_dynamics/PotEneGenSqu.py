@@ -45,7 +45,7 @@ class Pot_Energy_Gen(object):
     	    f.write('#this format is:\n')
     	    f.write('#index x U(x) F(x)\n')
             for index in range(self.N):
-        	f.write('{} {} {} {}\n'.format(index + 1, x[index], U[index], F[index]))
+        	f.write('%s %10s %10s %10s\n' %(index + 1, x[index], U[index], F[index]))
  
 
 

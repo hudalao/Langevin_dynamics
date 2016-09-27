@@ -23,7 +23,7 @@ import  PotEneGenSqu
 #Fp: potential force
 
 ####### the parameter input 
-intxt =  open('input.txt', 'r')
+intxt =  open('./input.txt', 'r')
 for line in intxt: 
     input_stri = line.split()
 intxt.close()
@@ -105,5 +105,5 @@ with open('output.txt', 'w') as f:
     f.write('#this format is:\n')
     f.write('#index t X V\n')
     for index in range(Tg):
-        f.write('{} {} {} {}\n'.format(index + 1, t_arr[index], X[index], V[index]))
+        f.write('%s %10s %10s %10s\n' %(index + 1, t_arr[index], X[index], V[index]))
 
