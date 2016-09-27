@@ -23,7 +23,7 @@ import  PotEneGenSqu
 #Fp: potential force
 
 ####### the parameter input 
-intxt =  open('./input.txt', 'r')
+intxt =  open('input1.txt', 'r')
 for line in intxt: 
     input_stri = line.split()
 intxt.close()
