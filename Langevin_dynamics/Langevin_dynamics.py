@@ -3,7 +3,7 @@
 import numpy as np
 import random as rd
 import math as mt
-
+import PotEneGenSqu as peg
 
 #the main program of Langevin Dynamics
 #input parameters format(in the first line of the input.txt file): 
@@ -47,8 +47,17 @@ Tg = int( Time/delta_t + 1 )
 #std: the standard variance of the gaussian function
 
  
-###### extracgt the potential force and correspoding position input
+###### calculate the potential force and input them
+# the potential energy surface with function (a-b*x^2)^2
 
+a1 = 5
+b1 = 1
+L = 10
+delta_x = 0.001
+
+pot = peg.Pot_Energy_Gen(delta_x, L, a1, b1)
+
+pot.output()
 
 inputdata = np.genfromtxt('potential_energy_squarex.txt')
 
