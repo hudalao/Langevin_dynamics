@@ -8,7 +8,6 @@ import numpy as np
 
 
 class Pot_Energy_Gen(object):
-     
     def __init__(self, delta_x, L, a, b):
         self.delta_x = delta_x
         self.L = L
@@ -38,7 +37,3 @@ class Pot_Energy_Gen(object):
             f.write('#index x U(x) F(x)\n')
             for index in range(self.N):
                 f.write('%s %10s %10s %10s\n' %(index + 1, x[index], U[index], F[index]))
- 
-
-
-

@@ -8,7 +8,6 @@ import numpy as np
 
 
 class Pot_Energy_Gen(object):
-     
     def __init__(self, delta_x, L, a, b):
         self.delta_x = delta_x
         self.L = L
@@ -29,16 +28,12 @@ class Pot_Energy_Gen(object):
         X = x - self.L / 2
         F = -4 * self.b * (self.a - self.b * X ** 2) * X
         return F
-    def output(self):        
+    def output(self):
         x = self.space_grid()
         U = self.pot()
         F = self.force()
         with open('potential_energy_squarex.txt', 'w') as f:
-    	    f.write('#this format is:\n')
-    	    f.write('#index x U(x) F(x)\n')
+            f.write('#this format is:\n')
+            f.write('#index x U(x) F(x)\n')
             for index in range(self.N):
                 f.write('%s %10s %10s %10s\n' %(index + 1, x[index], U[index], F[index]))
- 
-
-
-
