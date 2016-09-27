@@ -14,10 +14,10 @@ import unittest
 from contextlib import contextmanager
 from click.testing import CliRunner
 
-from project import Langevin_dynamics
-from project import cli
-from project import input1
-from porject import PotEneGenSqu
+from Langevin_dynamics import Langevin_dynamics
+from Langevin_dynamics import cli
+from Langevin_dynamics import input1
+from Langevin_dynamics import PotEneGenSqu
 
 
 class TestLangevin_dynamics(unittest.TestCase):
