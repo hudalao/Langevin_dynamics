@@ -6,6 +6,7 @@
 
 import numpy as np
 
+
 class Pot_Energy_Gen:
      
     def __init__(self, delta_x, L, a, b):

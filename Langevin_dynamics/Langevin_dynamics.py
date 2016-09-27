@@ -3,7 +3,7 @@
 import numpy as np
 import random as rd
 import math as mt
-import PotEneGenSqu as peg
+import  PotEneGenSqu
 
 #the main program of Langevin Dynamics
 #input parameters format(in the first line of the input.txt file): 
@@ -23,9 +23,9 @@ import PotEneGenSqu as peg
 #Fp: potential force
 
 ####### the parameter input 
-with open('input.txt', 'r') as intxt:
-    for line in intxt: 
-        input_stri = line.split()
+intxt =  open('input.txt', 'r')
+for line in intxt: 
+    input_stri = line.split()
 
 input_int = map(float, input_stri)
 
@@ -55,7 +55,7 @@ b1 = 1
 L = 10
 delta_x = 0.001
 
-pot = peg.Pot_Energy_Gen(delta_x, L, a1, b1)
+pot = PotEneGenSqu.Pot_Energy_Gen(delta_x, L, a1, b1)
 
 pot.output()
 
