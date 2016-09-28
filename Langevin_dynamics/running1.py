@@ -60,5 +60,7 @@ data_get = Ld.dynamics(X0, V0, T, damp, delta_t, Time, m, L, X_pot, Fp, Tg)
 
 t_arr,X,V = data_get
 
-Ld.output_f_v('output1.txt', Tg, t_arr, X, V)
+
+out_file = 'output1.txt'
+Ld.output_f_v(out_file, Tg, t_arr, X, V)
 
