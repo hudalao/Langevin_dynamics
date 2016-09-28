@@ -1,8 +1,6 @@
 # generate the potential energy surface with function (a-b*x^2)^2 and output
 #L: the range of movement of the particle
 #N:  the number of gird
-#U_peak:  the lowest energy
-#delta_x
 
 import numpy as np
 

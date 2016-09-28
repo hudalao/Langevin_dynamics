@@ -1,9 +1,3 @@
-import numpy as np
-import random as rd
-import math as mt
-import  PotEneGenSqu
-import Langevin_dynamics
-
 #the main program of Langevin Dynamics
 #input parameters format(in the first line of the input.txt file): 
 #x0: initial position
@@ -14,12 +8,17 @@ import Langevin_dynamics
 #Time: total time
 #m
 
-
 ####### the force parameter
 #F: net force
 #Fd: Drage force
 #Fs: solvent force
 #Fp: potential force
+
+import numpy as np
+import random as rd
+import math as mt
+import  PotEneGenSqu
+import Langevin_dynamics
 
 Ld = Langevin_dynamics.Langevin_dynamics()
 
