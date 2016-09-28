@@ -14,9 +14,9 @@ import unittest
 from contextlib import contextmanager
 from click.testing import CliRunner
 
-from Langevin_dynamics import Langevin_dynamics as Ld
+from Langevin_dynamics import Langevin_dynamics
 from Langevin_dynamics import cli
-from Langevin_dynamics import PotEneGenSqu as pegs
+from Langevin_dynamics import PotEneGenSqu
 import numpy as np
 
 class TestLangevin_dynamics(unittest.TestCase):
@@ -41,12 +41,12 @@ class TestLangevin_dynamics(unittest.TestCase):
 
     def test_input(self):
         input_test = [1.0, 0.0, 1.0, 1.0, 0.01, 10.0, 1.0]
-        input_proj = Ld.Langevin_dynamics().tran_input_float('input1.txt')
+        input_proj = Langevin_dynamics.Langevin_dynamics().tran_input_float('input1.txt')
         self.assertEqual(input_test, input_proj)
 
     def test_potential_output_length(self):
         size_assigned = int(8 / 0.001 + 1)
-        inputpot = pegs.Pot_Energy_Gen(0.001, 8, 5, 1)
+        inputpot = PotEneGenSqu.Pot_Energy_Gen(0.001, 8, 5, 1)
         pot = inputpot.pot()
         force = inputpot.force()
         size_pot = np.size(pot)
@@ -55,7 +55,7 @@ class TestLangevin_dynamics(unittest.TestCase):
         self.assertEqual(size_assigned, size_force)
 
     def test_energy_conservation(self):
-        LdLd = Ld.Langevin_dynamics()
+        LdLd = Langevin_dynamics.Langevin_dynamics()
         inputdata = np.genfromtxt('potential_energy_squarex.txt')
         N = np.size(inputdata, 0)
         Fp = np.zeros(N)
