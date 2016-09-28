@@ -95,11 +95,7 @@ for t in range(Tg):
     X[t] = x + delta_t * V[t]
 #the precition is the first three digits after the decimal to pick the corresponding potential force   
 # reset the value of x Fs, and fp for the next round
-    x = round(X[t], 3)
-    if x > L or x < 0:
-        x = x % L
-    else:
-        pass
+    x = round(X[t], 3) % L
     v = V[t]
     itemindex = np.where(X_pot == x)[0][0]
     fp = Fp[itemindex] 
