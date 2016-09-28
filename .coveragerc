@@ -1,5 +1,5 @@
 [run]
 source = Langevin_dynamics
 [report]
-include = Langevin_dynamics/*
+include = Langevin_dynamics/* test/*
 show_missing = True
