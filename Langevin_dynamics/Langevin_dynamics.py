@@ -46,7 +46,7 @@ class Langevin_dynamics():
         t_arr = np.linspace(0, Time, Tg)
         Fs = rd.gauss(mean, std)
         a = ( -damp * v  + Fs - fp ) / m
-        for t in range(Tg):
+        for t in range(Tg):             # using velocity verlet integration    
             v = v + 0.5 * a * delta_t
             X[t] = x + delta_t * v
             X[t] = X[t] % L
