@@ -46,7 +46,15 @@ b1 = 1
 L = 8
 delta_x = 0.001
 pot = PotEneGenSqu.Pot_Energy_Gen(delta_x, L, a1, b1)
-pot.output()
+x = pot.space_grid()
+U = pot.pot()
+F = pot.force()
+N = int(L / delta_x +1)
+with open('potential_energy_squarex.txt', 'w') as f:
+    f.write('#this format is:\n')
+    f.write('#index x U(x) F(x)\n')
+    for index in range(N):
+        f.write('%s %10s %10s %10s\n' %(index + 1, x[index], U[index], F[index]))
 inputdata = np.genfromtxt('potential_energy_squarex.txt')
 N = np.size(inputdata, 0)
 Fp = np.zeros(N)
@@ -61,5 +69,10 @@ t_arr,X,V = data_get
 
 
 out_file = 'output1.txt'
-Ld.output_f_v(out_file, Tg, t_arr, X, V)
+
+with open(out_file, 'w') as f:
+    f.write('#this format is:\n')
+    f.write('#index t X V\n')
+    for index in range(Tg):
+        f.write('%s %10s %10s %10s\n' %(index + 1, t_arr[index], X[index], V[index]))
 
