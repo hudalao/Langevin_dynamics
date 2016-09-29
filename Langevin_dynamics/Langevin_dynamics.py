@@ -59,10 +59,4 @@ class Langevin_dynamics():
             v = V[t]
         return t_arr, X, V
 
-    def output_f_v(self, file_name, Tg, t_arr, X, V):  # output the file with force and position at every time
-        with open(file_name, 'w') as f:
-            f.write('#this format is:\n')
-            f.write('#index t X V\n')
-            for index in range(Tg):
-                f.write('%s %10s %10s %10s\n' %(index + 1, t_arr[index], X[index], V[index]))
 
