@@ -44,7 +44,7 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
-./Langevin_dynamics/running1.py
+Langevin_dynamics/running1.py
 # Translations
 *.mo
 *.pot
