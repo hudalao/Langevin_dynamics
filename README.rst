@@ -18,8 +18,7 @@ The first project of CHE477 2016:  Langevin project
      :target: https://pyup.io/repos/github/hudalao/Langevin_dynamics/
      :alt: Updates
 
-.. image:: https://coveralls.io/repos/github/hudalao/Langevin_dynamics/badge.svg?branch=master
-     :target: https://coveralls.io/github/hudalao/Langevin_dynamics?branch=master
+
 
 Langevin_dynamics
 
