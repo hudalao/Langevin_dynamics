@@ -30,8 +30,21 @@ Langevin_dynamics
 
 Features
 --------
+Two Classes are included in this version:
 
-* TODO
+1. This first clasee Langevin_dynamics() is the main class. Two function are included.
+   The tran_input_float function() can read the input file with a line. The format of this file is  
+   x0: initial position; v0: initial velocity; T: temperature; damp: dampling coefficient; 
+   delta_t: time step; Time: total time ; m: the mass of the particle
+
+   The dynamics() is used to calcualte the position and velocity at every time points. The velocity
+   verlet integration has been used.
+
+2. The second class Pot_Energy_Gen is the class to generate the potential energy surface described by   function (a-b*(x-L/2)^2)^2, where a and b are constants, L is the range of movement of the
+   particle. Function space_grid() creates the space grid determined by the number of the grid N.
+   Function pot() create a array contains potential energy at every space points. Function force()
+   creates a array contains force at every space points.  
+
 
 Credits
 ---------

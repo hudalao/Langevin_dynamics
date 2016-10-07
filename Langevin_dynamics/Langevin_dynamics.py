@@ -50,7 +50,7 @@ class Langevin_dynamics():
             v = v + 0.5 * a * delta_t
             X[t] = x + delta_t * v
             X[t] = X[t] % L
-            x = round(X[t], 3)      # the boundary condition; only keep the first four digits after the decimal
+            x = round(X[t], 3)      # the boundary condition; And only keep the first four digits after the decimal
             itemindex = np.where(X_pot == x)[0][0]
             fp = Fp[itemindex]      # find the force corresponding to the current position
             Fs = rd.gauss(mean, std)     # using gaussian distribution to generate the solvent force
